@@ -1,0 +1,267 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "hub games",
+   Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+   LoadingTitle = "Loading hub...",
+   LoadingSubtitle = "by Romd3976",
+   ShowText = "Rayfield", -- for mobile users to unhide rayfield, change if you'd like
+   Theme = "Amber Glow", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+
+   ToggleUIKeybind = "K", -- The keybind to toggle the UI visibility (string like "K" or Enum.KeyCode)
+
+   DisableRayfieldPrompts = false,
+   DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
+
+   ConfigurationSaving = {
+      Enabled = false,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Big Hub"
+   },
+
+   Discord = {
+      Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
+      Invite = "", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+
+   KeySystem = false, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Untitled",
+      Subtitle = "Key System",
+      Note = ":) O_o", -- Use this to tell the user how to get a key
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+local MainTab = Window:CreateTab("Home🌍", nil) -- Title, Image
+local MainSection = MainTab:CreateSection("Main")
+
+Rayfield:Notify({
+   Title = "admin version",
+   Content = "Welcome back",
+   Duration = 6.5,
+   Image = 4483362458,
+   Actions = {  -- Notification Buttons
+         Ignore = {
+               Name = "Okay!",
+               Callback = function()
+               print("The user tapped Okay!")
+         end
+   },
+},
+})
+
+local Button = MainTab:CreateButton({
+   Name = "script color game",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Script-color-game/82a2445c4041c1e2ddec49c641331a1bbaa85111/Script%20color%20game"))();
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "script color game",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/sinci12/Roblox-Anti-Kick/refs/heads/main/Protected_7276315033915592.txt"))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "f3x(client",
+   Callback = function() loadstring(game:GetObjects("rbxassetid://6695644299")[1].Source)()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "script lol",
+   Callback = function()                             loadstring(game:HttpGet('https://raw.githubusercontent.com/03yome/Hhhhm/refs/heads/main/Ese'))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Antifling",
+   Callback = function() loadstring(game:HttpGet('https://raw.githubusercontent.com/Linux6699/DaHubRevival/main/AntiFling.lua'))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Shift lock",
+   Callback = function() loadstring(game:HttpGet("https://github.com/ltseverydayyou/uuuuuuu/blob/main/shiftlock?raw=true"))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Copy name",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Hub/refs/heads/main/Copy%20name"))()
+   end,
+})
+
+local MainTab = Window:CreateTab("Music🎵", nil)
+local MainSection = MainTab:CreateSection("no loop")
+
+local Button = MainTab:CreateButton({
+   Name = "Hacklord",
+   Callback = function() loadstring(game:HttpGet('https://raw.githubusercontent.com/03yome/HAck-Lord/refs/heads/main/No%20loop'))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "?",
+   Callback = function() loadstring(game:HttpGet('https://raw.githubusercontent.com/03yome/HAck-Lord/refs/heads/main/Close%20to%20me'))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+    Name = "?",
+    Callback = function() 
+local Sound = Instance.new("Sound")
+Sound.Name = "MyMusic"
+Sound.SoundId = "rbxassetid://1837767240"
+Sound.Volume = 5
+Sound.Looped = true
+Sound.Parent = workspace 
+
+Sound:Play()
+     end,
+})
+
+local MainSection = MainTab:CreateSection("Off music")
+
+local Button = MainTab:CreateButton({
+   Name = "script",
+   Callback = function() 
+for _, obj in pairs(workspace:GetChildren()) do
+    if obj:IsA("Sound") and obj.Name == "HacklordTheme" then
+        obj:Destroy()
+    end
+end
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "script",
+   Callback = function()
+ for _, obj in pairs(workspace:GetChildren()) do
+    if obj:IsA("Sound") and obj.Name == "MyTheme" then
+        obj:Destroy()
+    end
+end
+  end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "script",
+   Callback = function()
+ for _, obj in pairs(workspace:GetChildren()) do
+    if obj:IsA("Sound") and obj.Name == "MyMusic" then
+        obj:Destroy()
+    end
+end
+   end,
+})
+
+local MainTab = Window:CreateTab("not my script", nil)
+
+local Button = MainTab:CreateButton({
+   Name = "script",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Not-my-script/refs/heads/main/Script", true))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "script",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/FE%20Trolling%20GUI.luau"))()
+   end,
+})
+
+local MainTab = Window:CreateTab("Tools✏️", nil)
+
+local Button = MainTab:CreateButton({
+   Name = "Tools k",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Key.lua/refs/heads/main/Tools%201"))()
+   end,
+})
+
+local MainTab = Window:CreateTab("script me", nil)
+
+local Button = MainTab:CreateButton({
+   Name = "chicken gun",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Key.lua/refs/heads/main/Chicken%20gun"))()
+   end,
+})
+
+
+local Button = MainTab:CreateButton({
+   Name = "free morph",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Hub/refs/heads/main/Sk")
+)()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "j",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Hub/refs/heads/main/Kj")
+)()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "auto",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/x5oz6/S/refs/heads/main/D"))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Tono",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Hub/refs/heads/main/W"))()
+   end,
+})
+
+local MainTab = Window:CreateTab("Backdoor", nil)
+
+local Button = MainTab:CreateButton({
+   Name = "LALOL HUB",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/x5oz6/Backdoor/refs/heads/main/Lalo"))()
+   end,
+})
+
+local MainTab = Window:CreateTab("Create server", nil)
+
+local Button = MainTab:CreateButton({
+   Name = "Tesker",
+   Callback = function() loadstring(game:HttpGet("https://gist.githubusercontent.com/Tesker-103/ed48b3ae8120b0c040584b661cbda063/raw/210408b3f107dc740a4c9b832bfa647f92aa25d1/FreePrivateServerGUI"))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "c.server brainrot",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/ZenithExility/ZenikazeHub/refs/heads/main/ZenikazeV3.1"))()    
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "c.server",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/tienkhanh1/spicy/main/PrivateServer"))()
+   end,
+})
+
+local MainTab = Window:CreateTab("camera", nil)
+
+local Button = MainTab:CreateButton({
+   Name = "free cam",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/zephyr10101/CameraSpy/main/Script", true))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "jj",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/x5oz6/Game/refs/heads/main/J"))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "jj",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/x5oz6/Game/refs/heads/main/Bypass"))()
+   end,
+})
