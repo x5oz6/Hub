@@ -261,7 +261,7 @@ local Button = MainTab:CreateButton({
 })
 
 local Button = MainTab:CreateButton({
-   Name = "jj",
+   Name = "bypass",
    Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/x5oz6/Game/refs/heads/main/Bypass"))()
    end,
 })
