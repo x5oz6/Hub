@@ -265,3 +265,16 @@ local Button = MainTab:CreateButton({
    Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/x5oz6/Game/refs/heads/main/Bypass"))()
    end,
 })
+local MainTab = Window:CreateTab("Esp", nil)
+
+local Button = MainTab:CreateButton({
+   Name = "1",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/x5oz6/Esp/refs/heads/main/simple"))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "2",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/x5oz6/Esp/refs/heads/main/2"))()
+   end,
+})
