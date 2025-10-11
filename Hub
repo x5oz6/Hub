@@ -246,6 +246,12 @@ local Button = MainTab:CreateButton({
    end,
 })
 
+local Button = MainTab:CreateButton({
+   Name = "c.server",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/collectorhenfi-wq/Hendarscriptt/refs/heads/main/PRIVATSERVERALLGAME"))()
+   end,
+})
+
 local MainTab = Window:CreateTab("camera", nil)
 
 local Button = MainTab:CreateButton({
