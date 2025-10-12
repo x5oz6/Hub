@@ -259,6 +259,12 @@ local Button = MainTab:CreateButton({
 })
 
 local Button = MainTab:CreateButton({
+   Name = "Ak admin",
+   Callback = function() loadstring(game:HttpGet("https://angelical.me/ak.lua"))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
    Name = "find.s by me",
    Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Hub/refs/heads/main/Server"))()
    end,
