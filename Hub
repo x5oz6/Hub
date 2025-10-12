@@ -253,6 +253,12 @@ local Button = MainTab:CreateButton({
 })
 
 local Button = MainTab:CreateButton({
+   Name = "c.server",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/JoshzzAlteregooo/FreePrivateServer/refs/heads/main/UniversalFreePrivateServerByJoshzz"))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
    Name = "find.s by me",
    Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Hub/refs/heads/main/Server"))()
    end,
