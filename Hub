@@ -302,3 +302,24 @@ local Button = MainTab:CreateButton({
    Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/x5oz6/Esp/refs/heads/main/2"))()
    end,
 })
+
+local MainTab = Window:CreateTab("ADMINS", nil)
+
+local Button = MainTab:CreateButton({
+   Name = "Console.line",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/NotAtomz/Atom-Scripts/refs/heads/main/ConsoleLine"))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Console.line.D",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/NotAtomz/Atom-Scripts/refs/heads/main/ConsoleLineDark.lua"))()
+   end,
+})
+
+
+local Button = MainTab:CreateButton({
+   Name = "Atomic.A.V2",
+   Callback = function() loadstring(game:HttpGet(""))()
+   end,
+})
