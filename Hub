@@ -62,7 +62,16 @@ local Button = MainTab:CreateButton({
 })
 
 local Button = MainTab:CreateButton({
-   Name = "script color game",
+   Name = "bypass",
+   Callback = function() 
+pcall(function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/hm5650/ACR/refs/heads/main/Acr", true))()
+end)
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "anti.kick",
    Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/sinci12/Roblox-Anti-Kick/refs/heads/main/Protected_7276315033915592.txt"))()
    end,
 })
