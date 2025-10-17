@@ -71,6 +71,13 @@ end)
 })
 
 local Button = MainTab:CreateButton({
+   Name = "fly",
+   Callback = function() 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Hub/refs/heads/main/Cly", true))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
    Name = "anti.kick",
    Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/sinci12/Roblox-Anti-Kick/refs/heads/main/Protected_7276315033915592.txt"))()
    end,
