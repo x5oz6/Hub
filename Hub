@@ -209,7 +209,7 @@ local MainTab = Window:CreateTab("morph", nil)
 
 local Button = MainTab:CreateButton({
    Name = "Hacklord",
-   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/x5oz6/Game/refs/heads/main/Hacklord.morph"))()
+   Callback = function() 
    end,
 })
 
