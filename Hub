@@ -1,3 +1,9 @@
+pcall(function()
+	if setclipboard then
+		setclipboard('https://www.youtube.com/@romd3976')
+	end
+end)
+
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
