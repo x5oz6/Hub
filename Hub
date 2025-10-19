@@ -448,35 +448,3 @@ player.CharacterAdded:Connect(function(character)
     end
 
 end)
-
-local MainTab = Window:CreateTab("ADMINS", nil)
-local Button = MainTab:CreateButton({
-   Name = "Console.line",
-   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/NotAtomz/Atom-Scripts/refs/heads/main/ConsoleLine"))()
-   end,
-})
-
-local Button = MainTab:CreateButton({
-   Name = "Console.line.D",
-   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/NotAtomz/Atom-Scripts/refs/heads/main/ConsoleLineDark.lua"))()
-   end,
-})
-
-
-local Button = MainTab:CreateButton({
-   Name = "Atomic.A.V2",
-   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/NotAtomz/Atom-Scripts/refs/heads/main/AtomicV2Script.lua"))()
-   end,
-})
-
-local Button = MainTab:CreateButton({
-   Name = "Atomic.A.V1",
-   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/NotAtomz/Atom-Scripts/refs/heads/main/atomic%20admin%20(1).lua"))()
-   end,
-})
-
-local Button = MainTab:CreateButton({
-   Name = "Atomic.A.V6",
-   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/NotAtomz/Atom-Scripts/refs/heads/main/atomadminv6.lua"))()
-   end,
-})
