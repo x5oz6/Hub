@@ -125,6 +125,12 @@ local Button = MainTab:CreateButton({
    end,
 })
 
+local Button = MainTab:CreateButton({
+   Name = "Vi ",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/x5oz6/translatoooor/refs/heads/main/Vi"))()
+   end,
+})
+
 local MainTab = Window:CreateTab("Music🎵", nil)
 local MainSection = MainTab:CreateSection("no loop")
 
