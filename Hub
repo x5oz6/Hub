@@ -448,7 +448,6 @@ player.CharacterAdded:Connect(function(character)
 end)
 
 local MainTab = Window:CreateTab("ADMINS", nil)
-
 local Button = MainTab:CreateButton({
    Name = "Console.line",
    Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/NotAtomz/Atom-Scripts/refs/heads/main/ConsoleLine"))()
