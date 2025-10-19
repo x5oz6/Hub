@@ -4,6 +4,8 @@ pcall(function()
 	end
 end)
 
+local player = game.Players.LocalPlayer
+
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
