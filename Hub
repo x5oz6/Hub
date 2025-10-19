@@ -119,6 +119,12 @@ local Button = MainTab:CreateButton({
    end,
 })
 
+local Button = MainTab:CreateButton({
+   Name = "pandemic ",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/ltseverydayyou/uuuuuuu/refs/heads/main/translatoooor"))()
+   end,
+})
+
 local MainTab = Window:CreateTab("Music🎵", nil)
 local MainSection = MainTab:CreateSection("no loop")
 
