@@ -213,6 +213,13 @@ local Button = MainTab:CreateButton({
    end,
 })
 
+local Button = MainTab:CreateButton({
+   Name = "invisible",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/x5oz6/Game/refs/heads/main/Invisible"))()
+   end,
+})
+
+
 local MainTab = Window:CreateTab("script me", nil)
 
 local Button = MainTab:CreateButton({
