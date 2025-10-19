@@ -363,10 +363,8 @@ local Button = MainTab:CreateButton({
    end,
 })
 
--- 🟢 Thêm dòng này ngay trên đầu script
 local player = game.Players.LocalPlayer
 
--- Giữ nguyên phần code cũ của bạn
 local MovementTab = Window:CreateTab("Movement", 4483345998)
 
 MovementTab:CreateSlider({
@@ -413,6 +411,18 @@ player.CharacterAdded:Connect(function(character)
         end
     end
 end)
+
+local Button = MainTab:CreateButton({
+   Name = "gun",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Gravity/refs/heads/main/Gun"))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "wall",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Gravity/refs/heads/main/Wall"))()
+   end,
+})
 
 local MainTab = Window:CreateTab("ADMINS", nil)
 
