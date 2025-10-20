@@ -419,9 +419,10 @@ local Button = MovementTab:CreateButton({
 })
 
 local Button = MovementTab:CreateButton({
-   Name = "wall",
-   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Gravity/refs/heads/main/Wall"))()
-   end,
+    Name = "Wall",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Gravity/refs/heads/main/Wall"))()
+    end,
 })
 
 local MainTab = Window:CreateTab("ADMINS", nil)
