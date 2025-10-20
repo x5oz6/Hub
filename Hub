@@ -412,20 +412,19 @@ player.CharacterAdded:Connect(function(character)
     end
 end)
 
-local Button = MovementTab:CreateButton({
+local Button = MainTab:CreateButton({
    Name = "gun",
    Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Gravity/refs/heads/main/Gun"))()
    end,
 })
 
-local Button = MovementTab:CreateButton({
+local Button = MainTab:CreateButton({
    Name = "wall",
    Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Gravity/refs/heads/main/Wall"))()
    end,
 })
 
 local MainTab = Window:CreateTab("ADMINS", nil)
-
 
 local Button = MainTab:CreateButton({
    Name = "Console.line",
