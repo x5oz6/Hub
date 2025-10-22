@@ -457,3 +457,39 @@ local Button = MainTab:CreateButton({
    Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/NotAtomz/Atom-Scripts/refs/heads/main/atomadminv6.lua"))()
    end,
 })
+
+SettingsTab:CreateToggle({
+
+    Name = "Save Settings",
+
+    CurrentValue = true,
+
+    Flag = "SaveSettings",
+
+    Callback = function(Value)
+
+        -- Toggle whether settings are saved
+
+    end
+
+})
+
+SettingsTab:CreateKeybind({
+
+    Name = "Toggle UI",
+
+    CurrentKeybind = "RightControl",
+
+    HoldToInteract = false,
+
+    Flag = "ToggleUIKeybind",
+
+    Callback = function()
+
+        -- Toggle UI visibility
+
+        Rayfield:ToggleWindow()
+
+    end
+
+})
