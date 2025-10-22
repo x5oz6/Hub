@@ -458,6 +458,8 @@ local Button = MainTab:CreateButton({
    end,
 })
 
+local SettingsTab = Window:CreateTab("Settings", 4483345998)
+
 SettingsTab:CreateToggle({
 
     Name = "Save Settings",
