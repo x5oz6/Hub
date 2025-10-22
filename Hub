@@ -464,7 +464,7 @@ SettingsTab:CreateToggle({
 
     Name = "Save Settings",
 
-    CurrentValue = true,
+    CurrentValue = false,
 
     Flag = "SaveSettings",
 
