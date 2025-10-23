@@ -425,6 +425,27 @@ local Button = MovementTab:CreateButton({
     end,
 })
 
+local Button = MovementTab:CreateButton({
+    Name = "double.j.c",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Hub/refs/heads/main/Double%20jump%20c"))()
+    end,
+})
+
+local Button = MovementTab:CreateButton({
+    Name = "double.j.n",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Hub/refs/heads/main/Double%20jump%20n"))()
+    end,
+})
+
+local Button = MovementTab:CreateButton({
+    Name = "inf.jump",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Hub/refs/heads/main/Infjump"))()
+    end,
+})
+
 local MainTab = Window:CreateTab("ADMINS", nil)
 
 local Button = MainTab:CreateButton({
