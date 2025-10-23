@@ -413,12 +413,6 @@ player.CharacterAdded:Connect(function(character)
 end)
 
 local Button = MovementTab:CreateButton({
-   Name = "gun",
-   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Gravity/refs/heads/main/Gun"))()
-   end,
-})
-
-local Button = MovementTab:CreateButton({
     Name = "Wall",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Gravity/refs/heads/main/Wall"))()
