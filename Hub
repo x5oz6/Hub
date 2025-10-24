@@ -131,6 +131,18 @@ local Button = MainTab:CreateButton({
    end,
 })
 
+local Button = MainTab:CreateButton({
+   Name = "Part",
+   Callback = function() loadstring(game:HttpGet('https://raw.githubusercontent.com/03yome/Hub/refs/heads/main/Part'))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Npc",
+   Callback = function() loadstring(game:HttpGet('https://raw.githubusercontent.com/03yome/Hub/refs/heads/main/Np'))()
+   end,
+})
+
 local MainTab = Window:CreateTab("Music🎵", nil)
 local MainSection = MainTab:CreateSection("no loop")
 
