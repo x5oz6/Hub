@@ -316,7 +316,7 @@ local Button = MainTab:CreateButton({
 local MainTab = Window:CreateTab("Executor", nil)
 
 local Button = MainTab:CreateButton({
-   Name = "LALOL HUB",
+   Name = "c00kgui",
    Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/rtlsmonk/c00lgui-made-by-rtls_a1-on-discord/refs/heads/main/have-fun"))()
    end,
 })
