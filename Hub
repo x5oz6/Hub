@@ -20,10 +20,11 @@ local Window = Rayfield:CreateWindow({
    DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
 
    ConfigurationSaving = {
-      Enabled = false,
-      FolderName = nil, -- Create a custom folder for your hub/game
-      FileName = "Big Hub"
-   },
+        Enabled = false,
+        FolderName = nil,
+        FileName = "Big Hub"
+    }
+})
 
    Discord = {
       Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
@@ -116,6 +117,21 @@ local Button = MainTab:CreateButton({
 local Button = MainTab:CreateButton({
    Name = "Shift lock",
    Callback = function() loadstring(game:HttpGet("https://github.com/ltseverydayyou/uuuuuuu/blob/main/shiftlock?raw=true"))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "friend",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/itsryp/roblox-scripts/main/friendviewer.lua"))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "v",
+   Callback = function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/sigmaboy123z/MYFRIENDSCRIPT/refs/heads/main/MYNEWFRIENDSPAWNER"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/fe-source/refs/heads/main/NPC/source/main.Luau"))()
    end,
 })
 
@@ -301,6 +317,14 @@ local MainTab = Window:CreateTab("Backdoor", nil)
 local Button = MainTab:CreateButton({
    Name = "LALOL HUB",
    Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/x5oz6/Backdoor/refs/heads/main/Lalo"))()
+   end,
+})
+
+local MainTab = Window:CreateTab("Executor", nil)
+
+local Button = Tab:CreateButton({
+   Name = "c00lkidd",
+   Callback = function()loadstring(game:HttpGet("https://raw.githubusercontent.com/rtlsmonk/c00lgui-made-by-rtls_a1-on-discord/refs/heads/main/have-fun"))()
    end,
 })
 
