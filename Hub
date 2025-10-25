@@ -121,18 +121,15 @@ local Button = MainTab:CreateButton({
 
 local Button = MainTab:CreateButton({
    Name = "friend",
-   Callback = function() --[[
-	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
-]]
+   Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/itsryp/roblox-scripts/main/friendviewer.lua"))()
    end,
 })
 
 local Button = MainTab:CreateButton({
    Name = "v",
-   Callback = function() --[[
+   Callback = function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/sigmaboy123z/MYFRIENDSCRIPT/refs/heads/main/MYNEWFRIENDSPAWNER"))()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/fe-source/refs/heads/main/NPC/source/main.Luau"))()
    end,
 })
 
