@@ -120,13 +120,6 @@ local Button = MainTab:CreateButton({
 })
 
 local Button = MainTab:CreateButton({
-   Name = "friend",
-   Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/itsryp/roblox-scripts/main/friendviewer.lua"))()
-   end,
-})
-
-local Button = MainTab:CreateButton({
    Name = "Copy name",
    Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Hub/refs/heads/main/Copy%20name"))()
    end,
