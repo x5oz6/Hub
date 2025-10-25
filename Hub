@@ -23,8 +23,7 @@ local Window = Rayfield:CreateWindow({
         Enabled = false,
         FolderName = nil,
         FileName = "Big Hub"
-    }
-})
+    },
 
    Discord = {
       Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
