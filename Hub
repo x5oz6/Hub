@@ -127,13 +127,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/itsryp/roblox-scripts
 })
 
 local Button = MainTab:CreateButton({
-   Name = "v",
-   Callback = function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/sigmaboy123z/MYFRIENDSCRIPT/refs/heads/main/MYNEWFRIENDSPAWNER"))()
-   end,
-})
-
-local Button = MainTab:CreateButton({
    Name = "Copy name",
    Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Hub/refs/heads/main/Copy%20name"))()
    end,
