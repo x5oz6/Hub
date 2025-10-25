@@ -310,6 +310,15 @@ local Button = MainTab:CreateButton({
    end,
 })
 
+local MainTab = Window:CreateTab("Games", nil)
+local MainSection = MainTab:CreateSection("me 100%")
+
+local Button = MainTab:CreateButton({
+   Name = "MetroMan.Simulator",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Games/refs/heads/main/MetroMan.simulator"))()
+   end,
+})
+
 local MainTab = Window:CreateTab("Backdoor", nil)
 
 local Button = MainTab:CreateButton({
