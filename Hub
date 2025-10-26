@@ -241,6 +241,12 @@ local Button = MainTab:CreateButton({
    end,
 })
 
+local Button = MainTab:CreateButton({
+   Name = "Minecraft",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/ZynixMoz/SkyeMoz/refs/heads/main/MozCraft/Main"))()
+   end,
+})
+
 local MainTab = Window:CreateTab("Tools✏️", nil)
 
 local Button = MainTab:CreateButton({
