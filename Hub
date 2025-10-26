@@ -400,6 +400,18 @@ local Button = MainTab:CreateButton({
    end,
 })
 
+local Button = MainTab:CreateButton({
+   Name = "npc",
+   Callback = function() loadstring(game:HttpGet('https://raw.githubusercontent.com/Lucasfin000/SpaceHub/main/UESP'))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "2",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/x5oz6/Esp/refs/heads/main/2"))()
+   end,
+})
+
 local player = game.Players.LocalPlayer
 
 local MovementTab = Window:CreateTab("Movement", 4483345998)
