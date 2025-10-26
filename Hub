@@ -407,8 +407,8 @@ local Button = MainTab:CreateButton({
 })
 
 local Button = MainTab:CreateButton({
-   Name = "2",
-   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/x5oz6/Esp/refs/heads/main/2"))()
+   Name = "team",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/x5oz6/Esp/refs/heads/main/Team"))()
    end,
 })
 
