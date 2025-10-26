@@ -152,6 +152,12 @@ local Button = MainTab:CreateButton({
 })
 
 local Button = MainTab:CreateButton({
+   Name = "npc panle",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/fe-source/refs/heads/main/NPC/source/main.Luau"))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
    Name = "Part",
    Callback = function() loadstring(game:HttpGet('https://raw.githubusercontent.com/03yome/Hub/refs/heads/main/Part'))()
    end,
