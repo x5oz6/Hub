@@ -337,6 +337,12 @@ local Button = MainTab:CreateButton({
    end,
 })
 
+local Button = MainTab:CreateButton({
+   Name = "scp-096 maze",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Games/refs/heads/main/SCP-096%20COMIX%20Demonstration%20Without%20The%20Maze"))()
+   end,
+})
+
 local MainTab = Window:CreateTab("Backdoor", nil)
 
 local Button = MainTab:CreateButton({
