@@ -535,6 +535,12 @@ local Button = MainTab:CreateButton({
    end,
 })
 
+local Button = MainTab:CreateButton({
+   Name = "2",
+   Callback = function() loadstring(game:HttpGetAsync"https://raw.githubusercontent.com/p0e1/Gg/refs/heads/main/RemoteSpy.lua")()
+   end,
+})
+
 local SettingsTab = Window:CreateTab("Settings", 4483345998)
 
 SettingsTab:CreateToggle({
