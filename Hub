@@ -509,7 +509,6 @@ local Button = MainTab:CreateButton({
    end,
 })
 
-
 local Button = MainTab:CreateButton({
    Name = "Atomic.A.V2",
    Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/NotAtomz/Atom-Scripts/refs/heads/main/AtomicV2Script.lua"))()
@@ -525,6 +524,14 @@ local Button = MainTab:CreateButton({
 local Button = MainTab:CreateButton({
    Name = "Atomic.A.V6",
    Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/NotAtomz/Atom-Scripts/refs/heads/main/atomadminv6.lua"))()
+   end,
+})
+
+local MainTab = Window:CreateTab("spys", nil)
+
+local Button = MainTab:CreateButton({
+   Name = "1",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/InfernusScripts/Ketamine/refs/heads/main/Ketamine.lua"))()
    end,
 })
 
