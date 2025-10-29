@@ -120,6 +120,12 @@ local Button = MainTab:CreateButton({
 })
 
 local Button = MainTab:CreateButton({
+   Name = "black",
+   Callback = function() loadstring(game:HttpGet("https://pastefy.app/QH9EnqU3/raw"))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
    Name = "friend",
    Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/itsryp/roblox-scripts/main/friendviewer.lua"))()
