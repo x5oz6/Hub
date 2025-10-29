@@ -561,6 +561,13 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/ltseverydayyou/uuuuuu
    end,
 })
 
+local Button = MainTab:CreateButton({
+   Name = "5",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/exxtremestuffs/SimpleSpySource/master/SimpleSpy.lua"))()
+   end,
+})
+
 local SettingsTab = Window:CreateTab("Settings", 4483345998)
 
 SettingsTab:CreateToggle({
