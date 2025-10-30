@@ -617,3 +617,12 @@ SettingsTab:CreateKeybind({
     end
 
 })
+
+local MainTab = Window:CreateTab("hubs", nil)
+local MainSection = MainTab:CreateSection("me")
+
+local Button = MainTab:CreateButton({
+   Name = "free product",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/x5oz6/Hub/refs/heads/main/Free%20product", true))()
+   end,
+})
