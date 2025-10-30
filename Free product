@@ -1,0 +1,84 @@
+local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
+local window = DrRayLibrary:Load("03y_o - free product", "Default")
+
+game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "Thank you",
+    Text = "wow",
+    Duration = 0.5
+})
+
+local originalButtons = {}
+
+local function addButton(tab, title, description, url)
+    tab.newLabel(" ")
+    local button = tab.newButton(title, description, function()
+        loadstring(game:HttpGet(url))()
+    end)
+    table.insert(originalButtons, {tab = tab, title = title, description = description, url = url})
+end
+
+local function createTab(tabName, imageId)
+    local tab = DrRayLibrary.newTab(tabName, imageId)
+
+    tab.newButton("join now", "Discord me", function()
+        setclipboard("")
+        game:GetService("StarterGui"):SetCore("SendNotification", {
+            Title = "Copied!",
+            Text = "Link Has Been Copied From Your Clipboard.",
+            Duration = 3
+        })
+    end)
+
+    tab.newInput("Search", "Enter a keyword to search a game name.", function(inputSearch)
+        search = inputSearch
+    end)
+
+    tab.newButton("Enter Search", "Searches For The Keyword", function()
+        searchButtons(tab, search)
+    end)
+
+    tab.newButton("Refresh", "Refresh List's", function()
+        refreshButtons(tab)
+    end)
+
+    return tab
+end
+
+local function refreshButtons(tab)
+    for _, child in ipairs(tab:GetChildren()) do
+        if child:IsA("GuiButton") then
+            child:Destroy()
+        end
+    end
+    for _, btn in ipairs(originalButtons) do
+        if btn.tab == tab then
+            addButton(tab, btn.title, btn.description, btn.url)
+        end
+    end
+end
+
+local function searchButtons(tab, keyword)
+    for _, child in ipairs(tab:GetChildren()) do
+        if child:IsA("GuiButton") then
+            child:Destroy()
+        end
+    end
+    for _, btn in ipairs(originalButtons) do
+        if btn.tab == tab and string.find(btn.title:lower(), keyword:lower()) then
+            addButton(tab, btn.title, btn.description, btn.url)
+        end
+    end
+end
+
+local tab = createTab("-•Free•-", "ImageIdHere")
+tab.newLabel("-•-- Free --•-")
+
+addButton(tab, "1", "Click To Run", 'https://pastebin.com/raw/GTsB08Tb')
+addButton(tab, "2", "Click To Run", 'https://rawscripts.net/raw/Tank-Rails-Alpha-free-product-38676')
+addButton(tab, "3", "Click To Run", 'https://rawscripts.net/raw/Universal-Script-free-gamepass-works-in-some-games-23863')
+addButton(tab, "wyborn", "Click To Run", 'https://raw.githubusercontent.com/ckw69/Wyborn/main/wyborn')
+addButton(tab, "wyvern", "Click To Run", 'https://raw.githubusercontent.com/wyvernleaker/WYVERN/main/WYVERN.lua')
+
+tab = createTab("-•Premium•-", "ImageIdHere")
+
+tab = createTab("-•W.I.P•-", "ImageIdHere")
