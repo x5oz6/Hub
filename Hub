@@ -102,6 +102,12 @@ local Button = MainTab:CreateButton({
 })
 
 local Button = MainTab:CreateButton({
+   Name = "show name",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/D/refs/heads/main/View%20name"))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
    Name = "script lol",
    Callback = function() loadstring(game:HttpGet('https://raw.githubusercontent.com/03yome/Hhhhm/refs/heads/main/Ese'))()
    end,
