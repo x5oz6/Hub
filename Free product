@@ -79,8 +79,6 @@ addButton(tab, "3", "Click To Run", 'https://rawscripts.net/raw/Universal-Script
 addButton(tab, "wyborn", "Click To Run", 'https://raw.githubusercontent.com/ckw69/Wyborn/main/wyborn')
 addButton(tab, "wyvern", "Click To Run", 'https://raw.githubusercontent.com/wyvernleaker/WYVERN/main/WYVERN.lua')
 
-tab = createTab("-•Game•-", "ImageIdHere")
-
-addButton(tab, "1", "Click To Run", 'https://raw.githubusercontent.com/03yome/Games/refs/heads/main/The.pay.two.win.obby')
+tab = createTab("-•Vip•-", "ImageIdHere")
 
 tab = createTab("-•W.I.P•-", "ImageIdHere")
