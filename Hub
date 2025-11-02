@@ -182,7 +182,7 @@ local Button = MainTab:CreateButton({
 })
 
 local Button = MainTab:CreateButton({
-   Name = "viewer.backpack",
+   Name = "viewer.part",
    Callback = function() loadstring(game:HttpGet('https://raw.githubusercontent.com/03yome/D/refs/heads/main/Viewer.backpack.players'))()
    end,
 })
@@ -369,6 +369,12 @@ local Button = MainTab:CreateButton({
 local Button = MainTab:CreateButton({
    Name = "steal time from others",
    Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Games/refs/heads/main/Steal%20time%20from%20others"))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "the pay 2 win obby",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Games/refs/heads/main/The.pay.two.win.obby"))()
    end,
 })
 
