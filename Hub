@@ -193,6 +193,18 @@ local Button = MainTab:CreateButton({
    end,
 })
 
+local Button = MainTab:CreateButton({
+   Name = "delete",
+   Callback = function() if gethui then
+    for _, gui in pairs(gethui():GetChildren()) do
+        if gui.Name:lower():find("rayfield") then
+            gui:Destroy()
+        end
+    end
+end
+   end,
+})
+
 local MainTab = Window:CreateTab("Music🎵", nil)
 local MainSection = MainTab:CreateSection("no loop")
 
