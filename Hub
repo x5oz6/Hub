@@ -299,14 +299,7 @@ local Button = MainTab:CreateButton({
    end,
 })
 
-
 local MainTab = Window:CreateTab("script me", nil)
-
-local Button = MainTab:CreateButton({
-   Name = "chicken gun",
-   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Key.lua/refs/heads/main/Chicken%20gun"))()
-   end,
-})
 
 local Button = MainTab:CreateButton({
    Name = "🐺",
@@ -350,6 +343,12 @@ local MainTab = Window:CreateTab("Games", nil)
 local MainSection = MainTab:CreateSection("me 100%")
 
 local Button = MainTab:CreateButton({
+   Name = "chicken gun",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Key.lua/refs/heads/main/Chicken%20gun"))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
    Name = "MetroMan.Simulator",
    Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Games/refs/heads/main/MetroMan.simulator"))()
    end,
@@ -370,6 +369,12 @@ local Button = MainTab:CreateButton({
 local Button = MainTab:CreateButton({
    Name = "steal time from others",
    Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Games/refs/heads/main/Steal%20time%20from%20others"))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "the pay 2 win obby",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Games/refs/heads/main/The%20pay%202%20win%20obby"))()
    end,
 })
 
