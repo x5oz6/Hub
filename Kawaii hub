@@ -6,7 +6,7 @@ local Window = Rayfield:CreateWindow({
    LoadingTitle = "Loading hub...",
    LoadingSubtitle = "by Romd3976",
    ShowText = "Open", -- for mobile users to unhide rayfield, change if you'd like
-   Theme = "Amber Glow", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+   Theme = "Serenity", -- Check https://docs.sirius.menu/rayfield/configuration/themes
 
    ToggleUIKeybind = "K", -- The keybind to toggle the UI visibility (string like "K" or Enum.KeyCode)
 
