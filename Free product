@@ -79,6 +79,9 @@ addButton(tab, "3", "Click To Run", 'https://rawscripts.net/raw/Universal-Script
 addButton(tab, "wyborn", "Click To Run", 'https://raw.githubusercontent.com/ckw69/Wyborn/main/wyborn')
 addButton(tab, "wyvern", "Click To Run", 'https://raw.githubusercontent.com/wyvernleaker/WYVERN/main/WYVERN.lua')
 
+local tab = createTab("-•Vip•-", "ImageIdHere")
 tab = createTab("-•Vip•-", "ImageIdHere")
+
+addButton(tab, "Scanner.gui", "Click To Run", 'https://raw.githubusercontent.com/03yome/D/refs/heads/main/Scanner%20gui')
 
 tab = createTab("-•W.I.P•-", "ImageIdHere")
