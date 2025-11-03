@@ -1,4 +1,4 @@
-local TARGET_NAME = "Rayfield"  -- đổi tên bạn muốn
+local TARGET_NAME = "DrRay"  -- đổi tên bạn muốn
 
 local Players = game:GetService("Players")
 local LP = Players.LocalPlayer
