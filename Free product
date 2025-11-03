@@ -93,3 +93,19 @@ tab = createTab("-•Cre•-", "ImageIdHere")
 tab.newLabel("Credits")
 
 tab.newLabel("romd.3976")
+
+local function getHumanoid()
+    local player = game.Players.LocalPlayer
+    local character = player.Character or player.CharacterAdded:Wait()
+    return character:WaitForChild("Humanoid")
+end
+
+tab.newInput("WalkSpeed", "Enter a value to set WalkSpeed", function(speed)
+    local humanoid = getHumanoid()
+    humanoid.WalkSpeed = tonumber(speed) or humanoid.WalkSpeed
+end)
+
+tab.newInput("JumpPower", "Enter a value to set JumpPower", function(jump)
+    local humanoid = getHumanoid()
+    humanoid.JumpPower = tonumber(jump) or humanoid.JumpPower
+end)
