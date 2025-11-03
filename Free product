@@ -81,4 +81,6 @@ addButton(tab, "wyvern", "Click To Run", 'https://raw.githubusercontent.com/wyve
 
 tab = createTab("-•Vip•-", "ImageIdHere")
 
+addButton(tab, "1", "Click To Run", 'https://raw.githubusercontent.com/03yome/D/refs/heads/main/Scanner%20gui')
+
 tab = createTab("-•W.I.P•-", "ImageIdHere")
