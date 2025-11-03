@@ -80,6 +80,7 @@ addButton(tab, "wyborn", "Click To Run", 'https://raw.githubusercontent.com/ckw6
 addButton(tab, "wyvern", "Click To Run", 'https://raw.githubusercontent.com/wyvernleaker/WYVERN/main/WYVERN.lua')
 
 tab = createTab("-•Vip•-", "ImageIdHere")
+local tab = createTab("-•Vip•-", "ImageIdHere")
 
 addButton(tab, "Scanner.gui", "Click To Run", 'https://raw.githubusercontent.com/03yome/D/refs/heads/main/Scanner%20gui')
 
