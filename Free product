@@ -1,54 +1,29 @@
--- Delete duplicate ScreenGui by name (keep the first instance)
+local TARGET_NAME = "Rayfield"  -- đổi tên bạn muốn
+
 local Players = game:GetService("Players")
 local LP = Players.LocalPlayer
-local StarterGui = game:GetService("StarterGui")
 
-local function getHUI()
-    if typeof(gethui) == "function" then
-        local ok, gui = pcall(gethui); if ok and gui then return gui end
-    end
-    return nil
-end
-
-local CONTAINERS = {
+local targets = {
     game:GetService("CoreGui"),
     LP:WaitForChild("PlayerGui"),
-    getHUI()
+    (typeof(gethui)=="function" and pcall(gethui) and gethui()) or nil
 }
 
-local DRY_RUN = false -- true = chỉ log, false = xóa thật
-
-local function notify(msg)
-    pcall(function()
-        StarterGui:SetCore("SendNotification", {Title="GUI Cleaner", Text=msg, Duration=4})
-    end)
-end
-
-local function clean(parent)
-    if not parent then return end
-    local seen = {}  -- name -> first instance we keep
-    for _, inst in ipairs(parent:GetChildren()) do
-        if inst:IsA("ScreenGui") then
-            local key = string.lower(inst.Name)
-            if not seen[key] then
-                seen[key] = inst
-            else
-                if DRY_RUN then
-                    print(("[DRY] Would delete duplicate '%s' at %s"):format(inst.Name, inst:GetFullName()))
-                else
-                    print(("[DEL] Duplicate '%s' -> %s"):format(inst.Name, inst:GetFullName()))
-                    pcall(function() inst:Destroy() end)
-                end
+for _, parent in ipairs(targets) do
+    if parent then
+        local list = {}
+        for _, inst in ipairs(parent:GetChildren()) do
+            if inst:IsA("ScreenGui") and inst.Name == TARGET_NAME then
+                table.insert(list, inst)
             end
+        end
+        -- giữ 1 cái đầu, xóa phần còn lại
+        for i = 2, #list do
+            pcall(function() list[i]:Destroy() end)
+            print("[DEL] Duplicate '"..TARGET_NAME.."' -> "..list[i]:GetFullName())
         end
     end
 end
-
-for _, parent in ipairs(CONTAINERS) do
-    clean(parent)
-end
-
-notify("Đã dọn GUI trùng tên (giữ lại bản đầu).")
 
 local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
 local window = DrRayLibrary:Load("03y_o - free product", "Default")
