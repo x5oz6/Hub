@@ -87,3 +87,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/D/refs/heads/m
 end)
 
 tab = createTab("-•W.I.P•-", "ImageIdHere")
+
+tab = createTab("-•Cre•-", "ImageIdHere")
+
+tab.newLabel("Credits")
+
+tab.newLabel("romd.3976")
