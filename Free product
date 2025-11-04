@@ -86,7 +86,13 @@ tab.newButton("Scan gui", "Scan", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/D/refs/heads/main/Scanner%20gui"))()
 end)
 
-tab = createTab("-•W.I.P•-", "ImageIdHere")
+tab = createTab("-•Mobs•-", "ImageIdHere")
+
+tab.newLabel("mobs")
+
+tab.newButton("wither", "Scan", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/anCZdK0T"))()
+end)
 
 tab = createTab("-•Cre•-", "ImageIdHere")
 
