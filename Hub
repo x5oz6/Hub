@@ -373,12 +373,6 @@ local Button = MainTab:CreateButton({
 })
 
 local Button = MainTab:CreateButton({
-   Name = "MetroMan.Simulator",
-   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Games/refs/heads/main/MetroMan.simulator"))()
-   end,
-})
-
-local Button = MainTab:CreateButton({
    Name = "Train rng",
    Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Games/refs/heads/main/Train%20rng"))()
    end,
