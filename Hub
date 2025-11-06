@@ -102,7 +102,7 @@ local Button = MainTab:CreateButton({
 })
 
 local Button = MainTab:CreateButton({
-   Name = "show name",
+   Name = "show part",
    Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/D/refs/heads/main/View%20name"))()
    end,
 })
