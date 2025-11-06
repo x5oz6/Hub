@@ -673,3 +673,12 @@ local Button = MainTab:CreateButton({
    Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/x5oz6/Hub/refs/heads/main/Free%20product", true))()
    end,
 })
+
+local MainSection = MainTab:CreateSection("more")
+
+local Button = MainTab:CreateButton({
+   Name = "tiger.hub",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/BalintTheDevXBack/Universal/refs/heads/main/TigerXHubV4"))()
+   end,
+})
