@@ -158,6 +158,13 @@ local Button = MainTab:CreateButton({
 })
 
 local Button = MainTab:CreateButton({
+   Name = "pad",
+   Callback = function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/D/refs/heads/main/Pad"))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
    Name = "Copy name",
    Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Hub/refs/heads/main/Copy%20name"))()
    end,
