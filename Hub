@@ -409,6 +409,12 @@ local Button = MainTab:CreateButton({
    end,
 })
 
+local Button = MainTab:CreateButton({
+   Name = "Gear troll tower",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Games/refs/heads/main/Gear%20troll%20tower"))()
+   end,
+})
+
 local MainTab = Window:CreateTab("Backdoor", nil)
 
 local Button = MainTab:CreateButton({
