@@ -138,6 +138,12 @@ local Button = MainTab:CreateButton({
 })
 
 local Button = MainTab:CreateButton({
+   Name = "black.v2",
+   Callback = function() loadstring(game:HttpGet("https://pastefy.app/PU6VWuJk/raw"))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
    Name = "black update",
    Callback = function() loadstring(game:HttpGet("https://pastefy.app/imk3rejs/raw"))()
    end,
