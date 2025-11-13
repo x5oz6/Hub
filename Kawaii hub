@@ -69,6 +69,13 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/hellohellohell012321/
    end,
 })
 
+local Button = MainTab:CreateButton({
+   Name = "disble",
+   Callback = function()
+Rayfield:Destroy()
+   end,
+})
+
 local MainSection = MainTab:CreateSection("more.rayfield")
 
 local Button = MainTab:CreateButton({
