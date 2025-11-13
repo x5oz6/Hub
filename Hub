@@ -74,6 +74,12 @@ local Button = MainTab:CreateButton({
 })
 
 local Button = MainTab:CreateButton({
+   Name = "ring",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/hm5650/PartController/refs/heads/main/PartController.lua", true))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
    Name = "bypass",
    Callback = function() 
 pcall(function()
