@@ -1,5 +1,6 @@
 if setfpscap then
     setfpscap(1000000)
+end
 
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
