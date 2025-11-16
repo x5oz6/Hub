@@ -325,6 +325,27 @@ local Button = MainTab:CreateButton({
 })
 
 local Button = MainTab:CreateButton({
+   Name = "c00lkid",
+   Callback = function() _G.Config = {
+    ["HatCollide"]     = false, -- Collision hats
+    ["ReClaim"]        = true,  -- Re Claim falling hats
+    ["Fling"]          = true,  -- Activate character flinging
+    ["HideCharacter"]  = true,  -- hide your character to void
+
+    ["FlingOption"] = {
+        ["HatFling"]        = false, -- Use hats to fling
+        ["Highlight"]       = true,  -- Glow targets
+        ["PredictionFling"] = true,  -- predict fling (so basicly fling people with body)
+        ["ToolFling"]       = false  -- use Tool from inventory/backpack to fling (don't equip any tools when the script run)
+    }
+}
+loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/qwertys/refs/heads/main/qwerty2.lua"))()
+
+-- noob body https://pastebin.com/raw/tKzQfh8i hats https://www.roblox.com/games/136733829568616/unknown-road-places
+   end,
+})
+
+local Button = MainTab:CreateButton({
    Name = "invisible",
    Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/x5oz6/Game/refs/heads/main/Invisible"))()
    end,
