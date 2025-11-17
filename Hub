@@ -539,6 +539,28 @@ local player = game.Players.LocalPlayer
 
 local MovementTab = Window:CreateTab("Movement", 4483345998)
 
+-- ========= SPEED SYSTEM =========
+local NormalSpeed = 16
+local SprintSpeed = 32
+local Sprinting = true
+
+local function GetHumanoid()
+    local Char = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
+    local Hum = Char:FindFirstChildOfClass("Humanoid")
+    if not Hum then
+        Char.ChildAdded:Wait()
+        return GetHumanoid()
+    end
+    return Hum
+end
+
+local function ApplySpeed(speed)
+    Humanoid = GetHumanoid()
+    if Humanoid then
+        Humanoid.WalkSpeed = speed
+    end
+end
+
 MovementTab:CreateSlider({
     Name = "Walk Speed",
     Range = {16, 250},
@@ -554,6 +576,21 @@ MovementTab:CreateSlider({
     end
 })
 
+local SprintSlider = MovementTab:CreateSlider({
+    Name = "Sprint Speed (Shift)",
+    Range = {0, 500},
+    Increment = 1,
+    Suffix = "Speed",
+    CurrentValue = SprintSpeed,
+    Flag = "SprintSpeedSlider",
+    Callback = function(Value)
+        SprintSpeed = Value
+        if Sprinting then
+            ApplySpeed(SprintSpeed)
+        end
+    end,
+})
+
 MovementTab:CreateSlider({
     Name = "Jump Power",
     Range = {50, 300},
@@ -567,6 +604,28 @@ MovementTab:CreateSlider({
             player.Character.Humanoid.JumpPower = Value
         end
     end
+})
+
+MovementTab:CreateButton({
+    Name = "Reset to Default",
+    Callback = function()
+        NormalSpeed = 16
+        SprintSpeed = 32
+        SpeedSlider:Set(16)
+        SprintSlider:Set(32)
+        ApplySpeed(16)
+    end,
+})
+
+MovementTab:CreateKeybind({
+    Name = "Sprint Key",
+    CurrentKeybind = "LeftShift",
+    HoldToInteract = true,
+    Flag = "SprintKey",
+    Callback = function(_, holding)
+        Sprinting = holding
+        ApplySpeed(holding and SprintSpeed or NormalSpeed)
+    end,
 })
 
 -- Auto-reset speed values when character respawns
