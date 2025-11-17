@@ -539,28 +539,6 @@ local player = game.Players.LocalPlayer
 
 local MovementTab = Window:CreateTab("Movement", 4483345998)
 
--- ========= SPEED SYSTEM =========
-local NormalSpeed = 16
-local SprintSpeed = 32
-local Sprinting = true
-
-local function GetHumanoid()
-    local Char = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
-    local Hum = Char:FindFirstChildOfClass("Humanoid")
-    if not Hum then
-        Char.ChildAdded:Wait()
-        return GetHumanoid()
-    end
-    return Hum
-end
-
-local function ApplySpeed(speed)
-    Humanoid = GetHumanoid()
-    if Humanoid then
-        Humanoid.WalkSpeed = speed
-    end
-end
-
 local SpeedSlider = MovementTab:CreateSlider({
     Name = "WalkSpeed",
     Range = {0, 300},
@@ -642,6 +620,29 @@ player.CharacterAdded:Connect(function(character)
         end
     end
 end)
+
+-- ========= SPEED SYSTEM =========
+local NormalSpeed = 16
+local SprintSpeed = 32
+local Sprinting = true
+
+local function GetHumanoid()
+    local Char = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
+    local Hum = Char:FindFirstChildOfClass("Humanoid")
+    if not Hum then
+        Char.ChildAdded:Wait()
+        return GetHumanoid()
+    end
+    return Hum
+end
+
+local function ApplySpeed(speed)
+    Humanoid = GetHumanoid()
+    if Humanoid then
+        Humanoid.WalkSpeed = speed
+    end
+end
+
 
 local Button = MovementTab:CreateButton({
     Name = "Wall",
