@@ -618,6 +618,16 @@ MovementTab:CreateSlider({
     end
 })
 
+if Rayfield.Flags.JumpPowerSlider then
+
+            humanoid.JumpPower = Rayfield.Flags.JumpPowerSlider
+
+        end
+
+    end
+
+end)
+
 MovementTab:CreateButton({
     Name = "Reset to Default",
     Callback = function()
