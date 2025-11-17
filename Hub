@@ -37,6 +37,35 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
+-- Services
+local Players = game:GetService("Players")
+local UIS = game:GetService("UserInputService")
+local RunService = game:GetService("RunService")
+local LocalPlayer = Players.LocalPlayer
+local Humanoid
+
+-- ========= SPEED SYSTEM =========
+local NormalSpeed = 16
+local SprintSpeed = 32
+local Sprinting = true
+
+local function GetHumanoid()
+    local Char = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
+    local Hum = Char:FindFirstChildOfClass("Humanoid")
+    if not Hum then
+        Char.ChildAdded:Wait()
+        return GetHumanoid()
+    end
+    return Hum
+end
+
+local function ApplySpeed(speed)
+    Humanoid = GetHumanoid()
+    if Humanoid then
+        Humanoid.WalkSpeed = speed
+    end
+end
+
 local MainTab = Window:CreateTab("Home🌍", nil) -- Title, Image
 local MainSection = MainTab:CreateSection("Main")
 
@@ -608,6 +637,13 @@ player.CharacterAdded:Connect(function(character)
     end
 end)
 
+LocalPlayer.CharacterAdded:Connect(function()
+    task.wait(0.5)
+    Humanoid = GetHumanoid()
+    ApplySpeed(Sprinting and SprintSpeed or NormalSpeed)
+    if Flying then StartFly() end
+end)
+
 MovementTab:CreateKeybind({
     Name = "Sprint Key",
     CurrentKeybind = "LeftShift",
@@ -618,35 +654,6 @@ MovementTab:CreateKeybind({
         ApplySpeed(holding and SprintSpeed or NormalSpeed)
     end,
 })
-
--- ========= SPEED SYSTEM =========
-
-local Players = game:GetService("Players")
-local UIS = game:GetService("UserInputService")
-local RunService = game:GetService("RunService")
-local LocalPlayer = Players.LocalPlayer
-local Humanoid
-
-local NormalSpeed = 16
-local SprintSpeed = 32
-local Sprinting = false
-
-local function GetHumanoid()
-    local Char = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
-    local Hum = Char:FindFirstChildOfClass("Humanoid")
-    if not Hum then
-        Char.ChildAdded:Wait()
-        return GetHumanoid()
-    end
-    return Hum
-end
-
-local function ApplySpeed(speed)
-    Humanoid = GetHumanoid()
-    if Humanoid then
-        Humanoid.WalkSpeed = speed
-    end
-end
 
 local Button = MovementTab:CreateButton({
     Name = "Wall",
