@@ -535,7 +535,11 @@ local Button = MainTab:CreateButton({
    end,
 })
 
-local player = game.Players.LocalPlayer
+local Players = game:GetService("Players")
+local UIS = game:GetService("UserInputService")
+local RunService = game:GetService("RunService")
+local LocalPlayer = Players.LocalPlayer
+local Humanoid
 
 local MovementTab = Window:CreateTab("Movement", 4483345998)
 
@@ -595,17 +599,6 @@ MovementTab:CreateButton({
     end,
 })
 
-MovementTab:CreateKeybind({
-    Name = "Sprint Key",
-    CurrentKeybind = "LeftShift",
-    HoldToInteract = true,
-    Flag = "SprintKey",
-    Callback = function(_, holding)
-        Sprinting = holding
-        ApplySpeed(holding and SprintSpeed or NormalSpeed)
-    end,
-})
-
 -- Auto-reset speed values when character respawns
 player.CharacterAdded:Connect(function(character)
     local humanoid = character:WaitForChild("Humanoid")
@@ -621,10 +614,21 @@ player.CharacterAdded:Connect(function(character)
     end
 end)
 
+MovementTab:CreateKeybind({
+    Name = "Sprint Key",
+    CurrentKeybind = "LeftShift",
+    HoldToInteract = true,
+    Flag = "SprintKey",
+    Callback = function(_, holding)
+        Sprinting = holding
+        ApplySpeed(holding and SprintSpeed or NormalSpeed)
+    end,
+})
+
 -- ========= SPEED SYSTEM =========
 local NormalSpeed = 16
 local SprintSpeed = 32
-local Sprinting = true
+local Sprinting = false
 
 local function GetHumanoid()
     local Char = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
