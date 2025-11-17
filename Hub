@@ -47,7 +47,7 @@ local Humanoid
 -- ========= SPEED SYSTEM =========
 local NormalSpeed = 16
 local SprintSpeed = 32
-local Sprinting = true
+local Sprinting = false
 
 local function GetHumanoid()
     local Char = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
@@ -65,6 +65,13 @@ local function ApplySpeed(speed)
         Humanoid.WalkSpeed = speed
     end
 end
+
+LocalPlayer.CharacterAdded:Connect(function()
+    task.wait(0.5)
+    Humanoid = GetHumanoid()
+    ApplySpeed(Sprinting and SprintSpeed or NormalSpeed)
+    if Flying then StartFly() end
+end)
 
 local MainTab = Window:CreateTab("Home🌍", nil) -- Title, Image
 local MainSection = MainTab:CreateSection("Main")
@@ -621,28 +628,6 @@ MovementTab:CreateButton({
         ApplySpeed(16)
     end,
 })
-
--- Auto-reset speed values when character respawns
-player.CharacterAdded:Connect(function(character)
-    local humanoid = character:WaitForChild("Humanoid")
-
-    if humanoid then
-        -- Reset speed based on saved values
-        if Rayfield.Flags.WalkSpeedSlider then
-            humanoid.WalkSpeed = Rayfield.Flags.WalkSpeedSlider
-        end
-        if Rayfield.Flags.JumpPowerSlider then
-            humanoid.JumpPower = Rayfield.Flags.JumpPowerSlider
-        end
-    end
-end)
-
-LocalPlayer.CharacterAdded:Connect(function()
-    task.wait(0.5)
-    Humanoid = GetHumanoid()
-    ApplySpeed(Sprinting and SprintSpeed or NormalSpeed)
-    if Flying then StartFly() end
-end)
 
 MovementTab:CreateKeybind({
     Name = "Sprint Key",
