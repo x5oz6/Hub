@@ -561,19 +561,19 @@ local function ApplySpeed(speed)
     end
 end
 
-MovementTab:CreateSlider({
-    Name = "Walk Speed",
-    Range = {16, 250},
+local SpeedSlider = MovementTab:CreateSlider({
+    Name = "WalkSpeed",
+    Range = {0, 300},
     Increment = 1,
     Suffix = "Speed",
-    CurrentValue = 16,
+    CurrentValue = NormalSpeed,
     Flag = "WalkSpeedSlider",
     Callback = function(Value)
-        -- Set walk speed
-        if player.Character and player.Character:FindFirstChild("Humanoid") then
-            player.Character.Humanoid.WalkSpeed = Value
+        NormalSpeed = Value
+        if not Sprinting then
+            ApplySpeed(NormalSpeed)
         end
-    end
+    end,
 })
 
 local SprintSlider = MovementTab:CreateSlider({
