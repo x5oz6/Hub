@@ -41,7 +41,6 @@ local Window = Rayfield:CreateWindow({
 local Players = game:GetService("Players")
 local UIS = game:GetService("UserInputService")
 local RunService = game:GetService("RunService")
-local LocalPlayer = Players.LocalPlayer
 local Humanoid
 
 -- ========= SPEED SYSTEM =========
@@ -572,6 +571,8 @@ local Button = MainTab:CreateButton({
 })
 
 local MovementTab = Window:CreateTab("Movement", 4483345998)
+
+local LocalPlayer = Players.LocalPlayer
 
 local SpeedSlider = MovementTab:CreateSlider({
     Name = "WalkSpeed",
