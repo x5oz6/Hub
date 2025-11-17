@@ -535,12 +535,6 @@ local Button = MainTab:CreateButton({
    end,
 })
 
-local Players = game:GetService("Players")
-local UIS = game:GetService("UserInputService")
-local RunService = game:GetService("RunService")
-local LocalPlayer = Players.LocalPlayer
-local Humanoid
-
 local MovementTab = Window:CreateTab("Movement", 4483345998)
 
 local SpeedSlider = MovementTab:CreateSlider({
@@ -626,6 +620,13 @@ MovementTab:CreateKeybind({
 })
 
 -- ========= SPEED SYSTEM =========
+
+local Players = game:GetService("Players")
+local UIS = game:GetService("UserInputService")
+local RunService = game:GetService("RunService")
+local LocalPlayer = Players.LocalPlayer
+local Humanoid
+
 local NormalSpeed = 16
 local SprintSpeed = 32
 local Sprinting = false
@@ -646,7 +647,6 @@ local function ApplySpeed(speed)
         Humanoid.WalkSpeed = speed
     end
 end
-
 
 local Button = MovementTab:CreateButton({
     Name = "Wall",
