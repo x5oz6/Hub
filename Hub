@@ -603,31 +603,6 @@ local SprintSlider = MovementTab:CreateSlider({
     end,
 })
 
-MovementTab:CreateSlider({
-    Name = "Jump Power",
-    Range = {50, 300},
-    Increment = 5,
-    Suffix = "Power",
-    CurrentValue = 50,
-    Flag = "JumpPowerSlider",
-    Callback = function(Value)
-        -- Set jump power
-        if player.Character and player.Character:FindFirstChild("Humanoid") then
-            player.Character.Humanoid.JumpPower = Value
-        end
-    end
-})
-
-if Rayfield.Flags.JumpPowerSlider then
-
-            humanoid.JumpPower = Rayfield.Flags.JumpPowerSlider
-
-        end
-
-    end
-
-end)
-
 MovementTab:CreateButton({
     Name = "Reset to Default",
     Callback = function()
@@ -677,6 +652,60 @@ local Button = MovementTab:CreateButton({
         loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Hub/refs/heads/main/Infjump"))()
     end,
 })
+
+MovementTab:CreateSlider({
+
+    Name = "Jump Power",
+
+    Range = {50, 300},
+
+    Increment = 5,
+
+    Suffix = "Power",
+
+    CurrentValue = 50,
+
+    Flag = "JumpPowerSlider",
+
+    Callback = function(Value)
+
+        -- Set jump power
+
+        if player.Character and player.Character:FindFirstChild("Humanoid") then
+
+            player.Character.Humanoid.JumpPower = Value
+
+        end
+
+    end
+
+})
+
+-- Auto-reset speed values when character respawns
+
+player.CharacterAdded:Connect(function(character)
+
+    local humanoid = character:WaitForChild("Humanoid")
+
+    if humanoid then
+
+        -- Reset speed based on saved values
+
+        if Rayfield.Flags.WalkSpeedSlider then
+
+            humanoid.WalkSpeed = Rayfield.Flags.WalkSpeedSlider
+
+        end
+
+        if Rayfield.Flags.JumpPowerSlider then
+
+            humanoid.JumpPower = Rayfield.Flags.JumpPowerSlider
+
+        end
+
+    end
+
+end)
 
 local MainTab = Window:CreateTab("ADMINS", nil)
 
