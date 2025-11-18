@@ -722,6 +722,13 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/ltseverydayyou/uuuuuu
 local Button = MainTab:CreateButton({
    Name = "3",
    Callback = function()
+loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Upbolt/Hydroxide/revision/init.lua"))(); loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Upbolt/Hydroxide/revision/ui/main.lua"))();
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "4",
+   Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/wfrefdewwss/Discord-Custom-Status-24-7/refs/heads/main/requirements.txt"))()
    end,
 })
