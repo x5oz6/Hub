@@ -1,0 +1,149 @@
+-- ======= Helper Function =======
+local function CreateInstance(Type, Properties, Children)
+    local Obj = Instance.new(Type)
+    for K, V in next, Properties or {} do
+        Obj[K] = V
+    end
+    for _, Child in next, Children or {} do
+        Child.Parent = Obj
+    end
+    return Obj
+end
+
+-- ======= Display Popup =======
+local function DisplayPopup(Title, Message, UseCoroutine)
+    if not getrenv then
+        return warn(Message)
+    end
+
+    local success, ErrorModule = pcall(function()
+        return getrenv().require(
+            game.CoreGui:WaitForChild("RobloxGui")
+                :WaitForChild("Modules")
+                :WaitForChild("ErrorPrompt")
+        )
+    end)
+
+    if not success then
+        return warn(Message)
+    end
+
+    local Prompt = ErrorModule.new("Default", { HideErrorCode = true })
+    local ErrorGui = CreateInstance("ScreenGui", {
+        Parent = game.CoreGui,
+        ResetOnSpawn = false
+    })
+
+    local CurrentCoroutine = UseCoroutine and coroutine.running()
+
+    Prompt:setParent(ErrorGui)
+    Prompt:setErrorTitle(Title)
+    Prompt:updateButtons({
+        {
+            Text = "NOTHING MUCH MY CRACKA!!",
+            Callback = function()
+                Prompt:_close()
+                ErrorGui:Destroy()
+                if CurrentCoroutine then
+                    coroutine.resume(CurrentCoroutine)
+                end
+            end,
+            Primary = true
+        }
+    }, "Default")
+
+    Prompt:_open(Message)
+
+    if CurrentCoroutine then
+        coroutine.yield()
+    end
+end
+
+-- Hiển thị popup
+DisplayPopup("Banned", "O_o?", true)
+
+-- Copy link vào clipboard
+pcall(function()
+    if setclipboard then
+        setclipboard('https://www.youtube.com/@romd3976')
+    end
+end)
+
+-- ======= Load Rayfield =======
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+    Name = "IdK script",
+    Icon = 0,
+    LoadingTitle = "Loading hub...",
+    LoadingSubtitle = "by Romd3976",
+    ShowText = "Open",
+    Theme = "Amber Glow",
+    ToggleUIKeybind = "K",
+    DisableRayfieldPrompts = false,
+    DisableBuildWarnings = false,
+    ConfigurationSaving = { Enabled = false, FolderName = nil, FileName = "Big Hub" },
+    Discord = { Enabled = false, Invite = "", RememberJoins = true },
+    KeySystem = true,
+    KeySettings = {
+        Title = "Untitled",
+        Subtitle = "Key System",
+        Note = ":) O_o",
+        FileName = "Key",
+        SaveKey = true,
+        GrabKeyFromSite = false,
+        Key = {"dtrwwp0"}
+    }
+})
+
+Rayfield:Notify({
+    Title = "player version",
+    Content = "Thanks for using the script ",
+    Duration = 6.5,
+    Image = 4483362458,
+    Actions = {
+        Ignore = {
+            Name = "Okay!",
+            Callback = function()
+                print("The user tapped Okay!")
+            end
+        }
+    }
+})
+
+-- ======= Tabs & Buttons (giữ nguyên bản gốc) =======
+local MainTab = Window:CreateTab("Home", 4483362458)
+local MainSection = MainTab:CreateSection("Main")
+
+local Button = MainTab:CreateButton({
+    Name = "unlock fps",
+    Callback = function()
+        if setfpscap then
+            setfpscap(1000000)
+        end
+    end,
+})
+
+local MainTab = Window:CreateTab("Games", 4483362458)
+local MainSection = MainTab:CreateSection("me")
+
+local Button = MainTab:CreateButton({
+    Name = "script color game",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Script-color-game/82a2445c4041c1e2ddec49c641331a1bbaa85111/Script%20color%20game"))();
+    end,
+})
+
+local Button = MainTab:CreateButton({
+    Name = "The.pay.to.win",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Games/refs/heads/main/The.pay.two.win.obby"))();
+    end,
+})
+
+local Button = MainTab:CreateButton({
+    Name = "Train.rng",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Games/refs/heads/main/Train%20rng"))();
+    end,
+})
