@@ -453,6 +453,18 @@ local Button = MainTab:CreateButton({
    end,
 })
 
+local Button = MainTab:CreateButton({
+   Name = "coil tele",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Tools/refs/heads/main/Coil%20tool%20telepot"))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "soliders",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Tools/refs/heads/main/soldier"))()
+   end,
+})
+
 local MainTab = Window:CreateTab("morph", nil)
 
 local Button = MainTab:CreateButton({
