@@ -76,6 +76,7 @@ tab.newLabel("-•-- Free --•-")
 addButton(tab, "1", "Click To Run", 'https://pastebin.com/raw/GTsB08Tb')
 addButton(tab, "2", "Click To Run", 'https://rawscripts.net/raw/Tank-Rails-Alpha-free-product-38676')
 addButton(tab, "3", "Click To Run", 'https://rawscripts.net/raw/Universal-Script-free-gamepass-works-in-some-games-23863')
+addButton(tab, "4", "Click To Run", 'https://raw.githubusercontent.com/03yome/Free-product-/refs/heads/main/Free-1')
 addButton(tab, "wyborn", "Click To Run", 'https://raw.githubusercontent.com/ckw69/Wyborn/main/wyborn')
 addButton(tab, "wyvern", "Click To Run", 'https://raw.githubusercontent.com/wyvernleaker/WYVERN/main/WYVERN.lua')
 
