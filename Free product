@@ -79,6 +79,7 @@ addButton(tab, "3", "Click To Run", 'https://rawscripts.net/raw/Universal-Script
 addButton(tab, "4", "Click To Run", 'https://raw.githubusercontent.com/03yome/Free-product-/refs/heads/main/Free-1')
 addButton(tab, "wyborn", "Click To Run", 'https://raw.githubusercontent.com/ckw69/Wyborn/main/wyborn')
 addButton(tab, "wyvern", "Click To Run", 'https://raw.githubusercontent.com/wyvernleaker/WYVERN/main/WYVERN.lua')
+addButton(tab, "Rayfield", "Click To Run", 'https://raw.githubusercontent.com/03yome/Hub/refs/heads/main/Free%20product')
 
 tab = createTab("-•Vip•-", "ImageIdHere")
 tab.newLabel("-•--Vip--•-")
