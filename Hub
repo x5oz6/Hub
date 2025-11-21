@@ -465,6 +465,19 @@ local Button = MainTab:CreateButton({
    end,
 })
 
+local Button = MainTab:CreateButton({
+   Name = "giver uis",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Gui/refs/heads/main/Giver%20uis"))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "tool giver",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Gui/refs/heads/main/Tool%20giver"))()
+   end,
+})
+
+
 local MainTab = Window:CreateTab("morph", nil)
 
 local Button = MainTab:CreateButton({
