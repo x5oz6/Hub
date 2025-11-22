@@ -587,7 +587,7 @@ local Button = MainTab:CreateButton({
 })
 
 local Button = MainTab:CreateButton({
-   Name = "the pay 2 win obby",
+   Name = "the pay to win obby",
    Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Games/refs/heads/main/The.pay.two.win.obby"))()
    end,
 })
