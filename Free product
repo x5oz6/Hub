@@ -80,6 +80,7 @@ addButton(tab, "4", "Click To Run", 'https://raw.githubusercontent.com/03yome/Fr
 addButton(tab, "wyborn", "Click To Run", 'https://raw.githubusercontent.com/ckw69/Wyborn/main/wyborn')
 addButton(tab, "wyvern", "Click To Run", 'https://raw.githubusercontent.com/wyvernleaker/WYVERN/main/WYVERN.lua')
 addButton(tab, "Rayfield", "Click To Run", 'https://raw.githubusercontent.com/03yome/Hub/refs/heads/main/Free%20product')
+addButton(tab, "Rayfield 2", "Click To Run",'https://pandadevelopment.net/virtual/file/fa6a33a5d15446c7')
 
 tab = createTab("-•Vip•-", "ImageIdHere")
 tab.newLabel("-•--Vip--•-")
