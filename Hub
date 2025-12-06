@@ -758,6 +758,13 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/wfrefdewwss/Discord-C
    end,
 })
 
+local Button = MainTab:CreateButton({
+   Name = "5",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/FryzerHub/Biggestscript/refs/heads/main/SilentSpy"))()
+   end,
+})
+
 local SettingsTab = Window:CreateTab("Settings", 4483345998)
 
 SettingsTab:CreateToggle({
