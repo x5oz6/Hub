@@ -93,7 +93,7 @@ tab = createTab("-•Mobs•-", "ImageIdHere")
 
 tab.newLabel("mobs")
 
-tab.newButton("wither", "Scan", function()
+tab.newButton("wither", "call", function()
 loadstring(game:HttpGet("https://pastebin.com/raw/anCZdK0T"))()
 end)
 
@@ -117,6 +117,46 @@ end)
 tab.newInput("JumpPower", "Enter a value to set JumpPower", function(jump)
     local humanoid = getHumanoid()
     humanoid.JumpPower = tonumber(jump) or humanoid.JumpPower
+end)
+
+tab.newButton("xray", "on/off", function()
+_G.MapToggleState = _G.MapToggleState or false  -- Giữ trạng thái khi chạy lần 2, 3, 4...
+
+local Players = game:GetService("Players")
+
+local transparencyValue = 0.5
+local original = _G.OriginalTransparency or {}
+_G.OriginalTransparency = original
+
+local function isPlayerPart(part)
+    local model = part:FindFirstAncestorOfClass("Model")
+    return model and Players:GetPlayerFromCharacter(model)
+end
+
+local function toggle(enable)
+    for _, part in pairs(workspace:GetDescendants()) do
+        if part:IsA("BasePart") and not isPlayerPart(part) then
+
+            if enable then
+                if not original[part] then
+                    original[part] = part.Transparency
+                end
+                part.Transparency = transparencyValue
+
+            else
+                if original[part] then
+                    part.Transparency = original[part]
+                end
+            end
+
+        end
+    end
+end
+
+-- ⭐ Tạo toggle giữ trạng thái mỗi lần executor chạy
+_G.MapToggleState = not _G.MapToggleState
+toggle(_G.MapToggleState)
+
 end)
 
 tab = createTab("-•Scripts•-", "ImageIdHere")
