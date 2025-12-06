@@ -803,6 +803,13 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/nizartitwaniii/Regist
    end,
 })
 
+local Button = MainTab:CreateButton({
+   Name = "11",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/RSPY/refs/heads/main/2"))()
+   end,
+})
+
 local SettingsTab = Window:CreateTab("Settings", 4483345998)
 
 SettingsTab:CreateToggle({
