@@ -772,6 +772,19 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/03yome/RSPY/refs/head
    end,
 })
 
+local Button = MainTab:CreateButton({
+   Name = "7",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/infyiff/backup/main/SimpleSpyV3/main.lua"))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "8",
+   Callback = function()
+loadstring(game:HttpGet("https://github.com/notpoiu/cobalt/releases/latest/download/Cobalt.luau"))()
+   end,
+})
 
 local SettingsTab = Window:CreateTab("Settings", 4483345998)
 
