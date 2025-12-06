@@ -786,6 +786,23 @@ loadstring(game:HttpGet("https://github.com/notpoiu/cobalt/releases/latest/downl
    end,
 })
 
+local Button = MainTab:CreateButton({
+   Name = "9",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ProphecySkondo/spytool/refs/heads/main/script.lua"))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "10",
+   Callback = function()
+--[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+loadstring(game:HttpGet("https://raw.githubusercontent.com/nizartitwaniii/Register-Roblox-/refs/heads/main/Protected_2944435597543940.txt"))()
+   end,
+})
+
 local SettingsTab = Window:CreateTab("Settings", 4483345998)
 
 SettingsTab:CreateToggle({
