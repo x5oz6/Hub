@@ -125,3 +125,11 @@ tab.newLabel("-•--Scripts--•-")
 tab.newButton("system.broken", "call", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/D/refs/heads/main/System%20broken"))()
 end)
+
+tab.newButton("create scripts", "call", function()
+--[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+loadstring(game:HttpGet("https://pastefy.app/voWHWgGQ/raw"))()
+end)
+
