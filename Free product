@@ -89,6 +89,51 @@ tab.newButton("Scan gui", "Scan", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/D/refs/heads/main/Scanner%20gui"))()
 end)
 
+tab.newButton("ring tool", "Scan", function()
+--[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
+game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool"))
+task.wait(0.2)
+local connection
+connection = game:GetService("RunService").Heartbeat:Connect(function()
+for _, v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+if v.Name == "Handle" and v.Parent:IsA("Tool") then
+v.Velocity = Vector3.new(50,0,0)
+end end end)
+task.wait(0.2)
+local boombox = game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool")
+local handle = boombox.Handle
+if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R15 then
+game.Players.LocalPlayer.Character.RightHand:Destroy()
+else
+game.Players.LocalPlayer.Character["Right Arm"]:Destroy()
+end
+local hrp = game.Players.LocalPlayer.Character.HumanoidRootPart
+local radius = 4.5
+local angle = 0
+local speed = 2
+connection4 = game:GetService("RunService").Heartbeat:Connect(function(deltatime)
+angle = angle + speed * deltatime
+local pos = hrp.Position
+local x = pos.X + math.sin(angle) * radius
+local y = pos.Y
+local z = pos.Z + math.cos(angle) * radius
+handle.Position = Vector3.new(x,y,z)
+end)
+local connec
+connec = game:GetService("TextChatService").SendingMessage:Connect(function(msg)
+if msg.Text == ";unpositiontoolorbit" or msg.Text == ";unptorbit" then
+connec:Disconnect()
+connec = nil
+connection4:Disconnect()
+connection4 = nil
+connection:Disconnect()
+connection = nil
+end end)
+end)
+
 tab = createTab("-•Mobs•-", "ImageIdHere")
 
 tab.newLabel("mobs")
