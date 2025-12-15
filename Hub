@@ -559,6 +559,12 @@ local Button = MainTab:CreateButton({
    end,
 })
 
+local Button = MainTab:CreateButton({
+   Name = "Hitbox",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Hitbox-extender/refs/heads/main/Hitbox%201"))()
+   end,
+})
+
 local MainTab = Window:CreateTab("Games", nil)
 local MainSection = MainTab:CreateSection("me 100%")
 
