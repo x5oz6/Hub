@@ -227,8 +227,8 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Hub/refs/heads
 })
 
 local Button = MainTab:CreateButton({
-   Name = "anti.kick",
-   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/sinci12/Roblox-Anti-Kick/refs/heads/main/Protected_7276315033915592.txt"))()
+   Name = "hitbox",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Hitbox-extender/refs/heads/main/Hitbox%201"))()
    end,
 })
 
