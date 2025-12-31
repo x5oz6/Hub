@@ -344,6 +344,12 @@ local Button = MainTab:CreateButton({
 })
 
 local Button = MainTab:CreateButton({
+   Name = "menu server",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/lumpiasallad/Roblox_ServerHop/refs/heads/main/ServerHopScript.lua"))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
    Name = "Npc",
    Callback = function() loadstring(game:HttpGet('https://raw.githubusercontent.com/03yome/Hub/refs/heads/main/Np'))()
    end,
