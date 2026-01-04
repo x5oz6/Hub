@@ -634,6 +634,12 @@ local Button = MainTab:CreateButton({
    end,
 })
 
+local Button = MainTab:CreateButton({
+   Name = "Slayer living space",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Games/refs/heads/main/Slayer%20living%20space%201"))()
+   end,
+})
+
 local MainTab = Window:CreateTab("Backdoor", nil)
 
 local Button = MainTab:CreateButton({
