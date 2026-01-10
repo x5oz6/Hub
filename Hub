@@ -605,12 +605,6 @@ local Button = MainTab:CreateButton({
 })
 
 local Button = MainTab:CreateButton({
-   Name = "the pay to win obby",
-   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Games/refs/heads/main/The.pay.two.win.obby"))()
-   end,
-})
-
-local Button = MainTab:CreateButton({
    Name = "Get Down",
    Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Games/refs/heads/main/Get%20down"))()
    end,
@@ -785,7 +779,7 @@ loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Upbolt/Hydroxide
 local Button = MainTab:CreateButton({
    Name = "4",
    Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/wfrefdewwss/Discord-Custom-Status-24-7/refs/heads/main/requirements.txt"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/RSPY/refs/heads/main/6"))()
    end,
 })
 
@@ -859,6 +853,13 @@ local Button = MainTab:CreateButton({
    Name = "14",
    Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/RSPY/refs/heads/main/5"))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "15",
+   Callback = function()
+loadstring(game:HttpGet("https://pastebin.com/raw/5aJ3VBGb"))()
    end,
 })
 
