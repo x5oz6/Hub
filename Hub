@@ -640,6 +640,12 @@ local Button = MainTab:CreateButton({
    end,
 })
 
+local Button = MainTab:CreateButton({
+   Name = "🔥🐱 AY MI GATITO AURA TOWER!",
+   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Games/refs/heads/main/%F0%9F%94%A5%F0%9F%90%B1%20AY%20MI%20GATITO%20AURA%20TOWER!"))()
+   end,
+})
+
 local MainTab = Window:CreateTab("Backdoor", nil)
 
 local Button = MainTab:CreateButton({
