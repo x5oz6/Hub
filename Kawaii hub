@@ -87,3 +87,10 @@ local Button = MainTab:CreateButton({
 loadstring(game:HttpGet("https://raw.githubusercontent.com/lololofffff/BloodHub/refs/heads/main/lua"))()
    end,
 })
+
+local Button = MainTab:CreateButton({
+   Name = "fling power",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/zyablicevalexei-star/fling-with-power-changer/refs/heads/main/flingchanger"))()
+   end,
+})
