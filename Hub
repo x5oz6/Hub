@@ -617,12 +617,6 @@ local Button = MainTab:CreateButton({
 })
 
 local Button = MainTab:CreateButton({
-   Name = "Unknow battle",
-   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Games/refs/heads/main/Unknow%20battle"))()
-   end,
-})
-
-local Button = MainTab:CreateButton({
    Name = "build to survive in the night",
    Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/Games/refs/heads/main/Build%20to%20survive%20in%20the%20night"))()
    end,
