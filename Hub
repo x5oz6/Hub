@@ -869,6 +869,13 @@ loadstring(game:HttpGet("https://pastebin.com/raw/5aJ3VBGb"))()
    end,
 })
 
+local Button = MainTab:CreateButton({
+   Name = "16",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/InfernusScripts/Octo-Spy/refs/heads/main/Main.lua"))()
+   end,
+})
+
 local SettingsTab = Window:CreateTab("Settings", 4483345998)
 
 SettingsTab:CreateToggle({
