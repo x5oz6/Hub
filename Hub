@@ -648,6 +648,13 @@ local Button = MainTab:CreateButton({
    end,
 })
 
+local Button = MainTab:CreateButton({
+   Name = "syntax hub",
+   Callback = function()
+loadstring(game:HttpGet('https://bitbucket.org/projects_early26/new/raw/4b0b3e689c1c2482e6ba12ee5fd4adb9cbdeae5d/v1.2.6.lua'))()
+   end,
+})
+
 local MainTab = Window:CreateTab("Executor", nil)
 
 local Button = MainTab:CreateButton({
