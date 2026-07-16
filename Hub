@@ -797,42 +797,35 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/RSPY/refs/head
 })
 
 local Button = MainTab:CreateButton({
-   Name = "5 simple spy rainbow",
-   Callback = function()
-loadstring(game:HttpGet("https://github.com/notpoiu/cobalt/releases/latest/download/Cobalt.luau"))()
-   end,
-})
-
-local Button = MainTab:CreateButton({
-   Name = "6 simple spy",
+   Name = "5 simple spy",
    Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/infyiff/backup/main/SimpleSpyV3/main.lua"))()
    end,
 })
 
 local Button = MainTab:CreateButton({
-   Name = "7",
+   Name = "6 simple spy rainbow",
    Callback = function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/03yome/RSPY/refs/heads/main/1'))()
    end,
 })
 
 local Button = MainTab:CreateButton({
-   Name = "8",
+   Name = "7",
    Callback = function()
 loadstring(game:HttpGet("https://github.com/notpoiu/cobalt/releases/latest/download/Cobalt.luau"))()
    end,
 })
 
 local Button = MainTab:CreateButton({
-   Name = "9",
+   Name = "8",
    Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ProphecySkondo/spytool/refs/heads/main/script.lua"))()
    end,
 })
 
 local Button = MainTab:CreateButton({
-   Name = "10",
+   Name = "9",
    Callback = function()
 --[[
 	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
@@ -842,42 +835,42 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/nizartitwaniii/Regist
 })
 
 local Button = MainTab:CreateButton({
-   Name = "11",
+   Name = "10",
    Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/RSPY/refs/heads/main/2"))()
    end,
 })
 
 local Button = MainTab:CreateButton({
-   Name = "12",
+   Name = "11",
    Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/RSPY/refs/heads/main/3"))()
    end,
 })
 
 local Button = MainTab:CreateButton({
-   Name = "13",
+   Name = "12",
    Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/RSPY/refs/heads/main/4"))()
    end,
 })
 
 local Button = MainTab:CreateButton({
-   Name = "14",
+   Name = "13",
    Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/03yome/RSPY/refs/heads/main/5"))()
    end,
 })
 
 local Button = MainTab:CreateButton({
-   Name = "15",
+   Name = "14",
    Callback = function()
 loadstring(game:HttpGet("https://pastebin.com/raw/5aJ3VBGb"))()
    end,
 })
 
 local Button = MainTab:CreateButton({
-   Name = "16",
+   Name = "15",
    Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/InfernusScripts/Octo-Spy/refs/heads/main/Main.lua"))()
    end,
